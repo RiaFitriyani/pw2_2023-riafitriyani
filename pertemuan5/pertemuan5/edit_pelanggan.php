@@ -102,14 +102,14 @@ $_idedit = $_GET['idedit'];
         <label for="jenis" class="col-4 col-form-label">Jenis Kartu</label>
         <div class="col-8">
             <?php 
-            $sqljenis = "SELECT * FROM kartu";
-            $rsjenis = $dbh->query($sqljenis);
+            $sqlkartu = "SELECT * FROM kartu";
+            $rskartu = $dbh->query($sqlkartu);
         ?>
             <select id="kartu_id" name="kartu_id" class="custom-select">
                 <?php 
-            foreach($rsjenis as $rowjenis){
+            foreach($rskartu as $rowkartu){
          ?>
-                <option value="<?=$rowjenis['id']?>"><?=$rowjenis['nama'] ?></option>
+                <option value="<?=$rowkartu['id']?>"><?=$rowkartu['nama'] ?></option>
                 <?php
             }
         ?>
